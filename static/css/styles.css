@@ -71,15 +71,16 @@ a {
 .featured {
   margin-top: -90px;
   position: relative;
+  overflow: hidden;
 }
 
 .featured-details {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: linear-gradient(to top, black 0%, transparent 100%);
+  background-image: linear-gradient(to top, black 0%, black 40%, transparent 100%);
 }
 
 
@@ -117,9 +118,94 @@ a {
 }
 
 .button {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 1em 5px .5em;
+  border: none;
+  border-radius: 3px;
+}
+
+.button::before {
+  /* border: 1px solid red; */
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
 }
 
 .button-secondary {
+  background: none;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 1.1em;
+  min-width: 100px;
+  cursor: pointer;
+  border: none;
+}
+
+.button-secondary::before {
+  display: block;
+  /* border: 1px solid green; */
+  content: '';
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.icon-plus::before {
+  background: url('../../images/icons/plus.svg');
+}
+
+.icon-play::before {
+  background: url('../../images/icons/play.svg');
+}
+
+.icon-info::before {
+  background: url('../../images/icons/info.svg');
+}
+
+
+
+
+.list-content {
+  /* border: 1px solid red; */
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.list-item {
+  display: inline-block;
+  margin-left: 10px;
+}
+.list-item:first-child {
+  margin: 0;
+}
+
+.list {
+  /* border: 1px solid green; */
+  padding: 0 1em;
+}
+
+main {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer {
   border: 1px solid red;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+
+
+.tab-list {
+  border: 1px solid green;
 }
