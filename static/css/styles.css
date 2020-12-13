@@ -36,6 +36,7 @@ body {
   color: white;
   margin: 0;
   font-family: Netflix;
+  /* padding-bottom: 108px; */
 }
 
 a {
@@ -197,15 +198,52 @@ main {
 }
 
 .footer {
-  border: 1px solid red;
-  position: fixed;
+  /* border: 1px solid red; */
+  position: sticky;
   bottom: 0;
   left: 0;
   right: 0;
   background: black;
+  padding: 1em 0 0;
 }
 
 
 .tab-list {
-  border: 1px solid green;
+  /* border: 1px solid green; */
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  list-style: none;
+  color: #6e6e6e;
+  padding-bottom: 1em;
+}
+.tab-list a {
+  color: #6e6e6e;
+}
+
+.tab-item {
+  /* border: 1px solid purple; */
+  text-align: center;
+  font-size: .9em;
+}
+
+.tab-item svg {
+  display: block;
+  /* border: 1px solid red; */
+  margin: auto;
+}
+
+.tab-item path{
+  fill: #6e6e6e;
+}
+
+/* .tab-item:hover path, .tab-item:hover span{
+  color: blue;
+  fill: blue;
+} */
+
+.tab-item:hover :is(path, span) {
+ fill: white;
+ color: white;
 }
